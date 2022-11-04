@@ -27,14 +27,32 @@
 // export default App;
 
 // Fragment를 다음과 같은 형태로 간소화
+// import React from 'react';
+
+// function App() {
+//   const name = 'react';
+//   return (
+//     <>
+//       <h1>{name} 안녕!</h1>
+//       <h2>잘 작동하니?</h2>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// if 문 대신 조건부 연산자 사용
 import React from 'react';
 
 function App() {
-  const name = 'react';
+  const name = '리액트';
   return (
     <>
-      <h1>{name} 안녕!</h1>
-      <h2>잘 작동하니?</h2>
+      {name === 'react' ? (
+        <h1>리액트입니다.</h1>
+      ) : (
+        <h2>리액트가 아닙니다.</h2>
+      )}
     </>
   );
 }
