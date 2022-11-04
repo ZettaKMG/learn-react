@@ -42,17 +42,32 @@
 // export default App;
 
 // if 문 대신 조건부 연산자 사용
+// import React from 'react';
+
+// function App() {
+//   const name = '리액트';
+//   return (
+//     <>
+//       {name === 'react' ? (
+//         <h1>리액트입니다.</h1>
+//       ) : (
+//         <h2>리액트가 아닙니다.</h2>
+//       )}
+//     </>
+//   );
+// }
+
+// export default App;
+
+// AND 연산자(&&) 사용한 조건부 렌더링
+// 삼항 연산자를 사용한 경우
 import React from 'react';
 
 function App() {
-  const name = '리액트';
+  const name = 'react';
   return (
     <>
-      {name === 'react' ? (
-        <h1>리액트입니다.</h1>
-      ) : (
-        <h2>리액트가 아닙니다.</h2>
-      )}
+      {name === 'react' ? <h1>리액트입니다.</h1> : null}
     </>
   );
 }
