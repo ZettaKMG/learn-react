@@ -160,12 +160,45 @@
 // export default App;
 
 // class -> className
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = 'react';
+//   return <div className="react">{name}</div>;
+// }
+
+// export default App;
+
+// 반드시 닫아주어야 하는 태그(html에서는 문제 없으나, JSX에서는 오류 발생)
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = 'react';
+//   return (
+//     <>
+//       <div className="react">{name}</div>
+//       <input>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// input 태그를 닫아야 오류가 발생하지 않음
 import React from 'react';
 import './App.css';
 
 function App() {
   const name = 'react';
-  return <div className="react">{name}</div>;
+  return (
+    <>
+      <div className="react">{name}</div>
+      <input></input>
+      <input /> {/* <- self_closing 태그 */}
+    </>
+  );
 }
 
 export default App;
