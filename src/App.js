@@ -75,11 +75,44 @@
 // export default App;
 
 // && 연산자를 사용한 경우
+// import React from 'react';
+
+// function App() {
+//   const name = 'react';
+//   return <>{name === 'react' && <h1>리액트입니다.</h1>}</>;
+// }
+
+// export default App;
+
+// undefined를 렌더링하지 않기(에러 발생)
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = undefined;
+//   return name;
+// }
+
+// export default App;
+
+// undefined를 렌더링하지 않기(OR(||) 연산자로 오류 방지)
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = undefined;
+//   return name || '값이 undefined 입니다.';
+// }
+
+// export default App;
+
+// JSX 내부에서 렌더링 하는 것은 ok
 import React from 'react';
+import './App.css';
 
 function App() {
-  const name = 'react';
-  return <>{name === 'react' && <h1>리액트입니다.</h1>}</>;
+  const name = undefined;
+  return <>{name}</>;
 }
 
 export default App;
