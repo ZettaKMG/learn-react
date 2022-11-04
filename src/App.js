@@ -26,13 +26,14 @@
 
 // export default App;
 
-// Fragment를 다음과 같은 형태로도 표현 가능
+// Fragment를 다음과 같은 형태로 간소화
 import React from 'react';
 
 function App() {
+  const name = 'react';
   return (
     <>
-      <h1>리액트 안녕!</h1>
+      <h1>{name} 안녕!</h1>
       <h2>잘 작동하니?</h2>
     </>
   );
