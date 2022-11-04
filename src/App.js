@@ -27,6 +27,20 @@
 // export default App;
 
 // Fragment를 다음과 같은 형태로 간소화
+// import React, { Fragment } from 'react';
+
+// function App() {
+//   return (
+//     <Fragment>
+//       <h1>리액트 안녕!</h1>
+//       <h2>잘 작동하니?</h2>
+//     </Fragment>
+//   );
+// }
+
+// export default App;
+
+// 자바스크립트 값을 JSX에서 렌더링 하기
 // import React from 'react';
 
 // function App() {
@@ -48,7 +62,7 @@
 //   const name = '리액트';
 //   return (
 //     <>
-//       {name === 'react' ? (
+//       {name === '리액트1' ? (
 //         <h1>리액트입니다.</h1>
 //       ) : (
 //         <h2>리액트가 아닙니다.</h2>
