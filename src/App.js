@@ -61,15 +61,25 @@
 
 // AND 연산자(&&) 사용한 조건부 렌더링
 // 삼항 연산자를 사용한 경우
+// import React from 'react';
+
+// function App() {
+//   const name = 'react';
+//   return (
+//     <>
+//       {name === 'react' ? <h1>리액트입니다.</h1> : null}
+//     </>
+//   );
+// }
+
+// export default App;
+
+// && 연산자를 사용한 경우
 import React from 'react';
 
 function App() {
   const name = 'react';
-  return (
-    <>
-      {name === 'react' ? <h1>리액트입니다.</h1> : null}
-    </>
-  );
+  return <>{name === 'react' && <h1>리액트입니다.</h1>}</>;
 }
 
 export default App;
