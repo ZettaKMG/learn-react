@@ -1,4 +1,4 @@
-// JSX에서는 class 대신 className으로 설정해야 함.
+/* JSX에서는 class 대신 className으로 설정해야 함. */
 .react {
   background : aqua;
   color : black;

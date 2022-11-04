@@ -136,25 +136,36 @@
 // export default App;
 
 // 인라인 스타일링(미리 선언 없이 바로 style 값 지정)
+// import React from 'react';
+
+// function App() {
+//   const name = 'react';
+  
+//   return (
+//     <div
+//       style={{
+//         // background-color -> backgroundColor 형태로 대체(camelCase법으로 작성)
+//         backgroundColor : 'black',
+//         color : 'aqua',
+//         fontSize : '36px', // font-size -> fontSize 로 대체
+//         fontWeight : 'bold', // font-weight -> fontWeight 로 대체
+//         padding : 16 // 단위 생략시 px 단위    
+//       }}
+//     >
+//       {name}
+//     </div>  
+//   );
+// }
+
+// export default App;
+
+// class -> className
 import React from 'react';
+import './App.css';
 
 function App() {
   const name = 'react';
-  
-  return (
-    <div
-      style={{
-        // background-color -> backgroundColor 형태로 대체(camelCase법으로 작성)
-        backgroundColor : 'black',
-        color : 'aqua',
-        fontSize : '36px', // font-size -> fontSize 로 대체
-        fontWeight : 'bold', // font-weight -> fontWeight 로 대체
-        padding : 16 // 단위 생략시 px 단위    
-      }}
-    >
-      {name}
-    </div>  
-  );
+  return <div className="react">{name}</div>;
 }
 
 export default App;
