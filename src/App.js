@@ -107,12 +107,54 @@
 // export default App;
 
 // JSX 내부에서 렌더링 하는 것은 ok
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = undefined;
+//   return <>{name}</>;
+// }
+
+// export default App;
+
+// 인라인 스타일링(style 객체를 미리 선언 후, div style 값으로 지정)
+// import React from 'react';
+
+// function App() {
+//   const name = 'react';
+//   const style = {
+//     // background-color -> backgroundColor 형태로 대체(camelCase법으로 작성)
+//     backgroundColor : 'black',
+//     color : 'aqua',
+//     fontSize : '36px', // font-size -> fontSize 로 대체
+//     fontWeight : 'bold', // font-weight -> fontWeight 로 대체
+//     padding : 16 // 단위 생략시 px 단위    
+//   };
+//   return <div style={style}>{name}</div>;
+// }
+
+// export default App;
+
+// 인라인 스타일링(미리 선언 없이 바로 style 값 지정)
 import React from 'react';
-import './App.css';
 
 function App() {
-  const name = undefined;
-  return <>{name}</>;
+  const name = 'react';
+  
+  return (
+    <div
+      style={{
+        // background-color -> backgroundColor 형태로 대체(camelCase법으로 작성)
+        backgroundColor : 'black',
+        color : 'aqua',
+        fontSize : '36px', // font-size -> fontSize 로 대체
+        fontWeight : 'bold', // font-weight -> fontWeight 로 대체
+        padding : 16 // 단위 생략시 px 단위    
+      }}
+    >
+      {name}
+    </div>  
+  );
 }
 
 export default App;
