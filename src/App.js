@@ -142,7 +142,7 @@
 //     color : 'aqua',
 //     fontSize : '36px', // font-size -> fontSize 로 대체
 //     fontWeight : 'bold', // font-weight -> fontWeight 로 대체
-//     padding : 16 // 단위 생략시 px 단위    
+//     padding : 16 // 단위 생략시 px 단위
 //   };
 //   return <div style={style}>{name}</div>;
 // }
@@ -154,7 +154,7 @@
 
 // function App() {
 //   const name = 'react';
-  
+
 //   return (
 //     <div
 //       style={{
@@ -163,11 +163,11 @@
 //         color : 'aqua',
 //         fontSize : '36px', // font-size -> fontSize 로 대체
 //         fontWeight : 'bold', // font-weight -> fontWeight 로 대체
-//         padding : 16 // 단위 생략시 px 단위    
+//         padding : 16 // 단위 생략시 px 단위
 //       }}
 //     >
 //       {name}
-//     </div>  
+//     </div>
 //   );
 // }
 
@@ -218,23 +218,41 @@
 // export default App;
 
 // 주석
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = 'react';
+//   return (
+//     <>
+//       {/* 주석은 이렇게 작성합니다. */}
+//       <div
+//         className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
+//       >
+//         {name}
+//       </div>
+//       // 하지만 이런 주석이나
+//       /* 이런 주석은 페이지에 그대로 나타나게 됩니다. */
+//       <input />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// 들여쓰기가 이상한 코드 작성
 import React from 'react';
 import './App.css';
 
 function App() {
   const name = 'react';
   return (
-    <>
-      {/* 주석은 이렇게 작성합니다. */}
-      <div
-        className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
-      >
-        {name}
-      </div>
-      // 하지만 이런 주석이나
-      /* 이런 주석은 페이지에 그대로 나타나게 됩니다. */
-      <input />
-    </>
+    <div>
+      <div className="react">{name}</div>
+      <h1>들여쓰기가 이상한</h1>
+      <h2>코드</h2>
+      <p>입니다.</p>
+    </div>
   );
 }
 
