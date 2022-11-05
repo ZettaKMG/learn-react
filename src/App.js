@@ -277,13 +277,25 @@
 // export default App;
 
 // 클래스형 컴포넌트의 예
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class App extends Component {
-  render() {
-    const name = 'react';
-    return <div className="react">{name}</div>;
-  }
-}
+// class App extends Component {
+//   render() {
+//     const name = 'react';
+//     return <div className="react">{name}</div>;
+//   }
+// }
 
-export default App;
+// export default App;
+
+// 모듈 불러오기 코드 작성
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent />;
+// };
+
+// export default App;
+
+//
