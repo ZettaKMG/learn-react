@@ -321,11 +321,31 @@
 // export default App;
 
 // children 보여주기
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent>리액트</MyComponent>;
+// };
+
+// export default App;
+
+// propTypes로 props 검증(콘솔 탭 에러 메세지 출력)
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent name={3}>리액트</MyComponent>;
+// };
+
+// export default App;
+
+// propTypes로 props 검증(에러 수정)
 import React from 'react';
 import MyComponent from './MyComponent';
 
 const App = () => {
-  return <MyComponent>리액트</MyComponent>;
+  return <MyComponent name="React">리액트</MyComponent>;
 };
 
 export default App;

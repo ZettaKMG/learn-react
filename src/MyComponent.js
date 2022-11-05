@@ -68,7 +68,27 @@
 // export default MyComponent;
 
 // 비구조화 할당 문법2
+// import React from 'react';
+
+// const MyComponent = ({ name, children }) => {
+//   return (
+//     <div>
+//       안녕하세요, 제 이름은 {name}입니다. <br />
+//       children 값은 {children}
+//       입니다.
+//     </div>
+//   );
+// };
+
+// MyComponent.defaultProps = {
+//   name: '기본 이름'
+// };
+
+// export default MyComponent;
+
+// propTypes로 props 검증
 import React from 'react';
+import propTypes from 'prop-types';
 
 const MyComponent = ({ name, children }) => {
   return (
@@ -82,6 +102,10 @@ const MyComponent = ({ name, children }) => {
 
 MyComponent.defaultProps = {
   name: '기본 이름',
+};
+
+MyComponent.propTypes = {
+  name: propTypes.string,
 };
 
 export default MyComponent;
