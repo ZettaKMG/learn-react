@@ -351,15 +351,25 @@
 // export default App;
 
 // 경고 메세지 사라지게 favoriteNumber 값 지정
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return (
+//     <MyComponent name="React" favoriteNumber={1}>
+//       리액트
+//     </MyComponent>
+//   );
+// };
+
+// export default App;
+
+// Counter 컴포넌트를 App에서 불러와 렌더링하기
 import React from 'react';
-import MyComponent from './MyComponent';
+import Counter from './Counter';
 
 const App = () => {
-  return (
-    <MyComponent name="React" favoriteNumber={1}>
-      리액트
-    </MyComponent>
-  );
+  return <Counter />;
 };
 
 export default App;
