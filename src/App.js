@@ -365,11 +365,21 @@
 // export default App;
 
 // Counter 컴포넌트를 App에서 불러와 렌더링하기
+// import React from 'react';
+// import Counter from './Counter';
+
+// const App = () => {
+//   return <Counter />;
+// };
+
+// export default App;
+
+// Say 컴포넌트를 App에서 렌더링
 import React from 'react';
-import Counter from './Counter';
+import Say from './Say';
 
 const App = () => {
-  return <Counter />;
+  return <Say />;
 };
 
 export default App;
