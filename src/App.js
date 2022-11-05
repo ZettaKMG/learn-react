@@ -299,11 +299,33 @@
 // export default App;
 
 // 컴포넌트를 사용할 때, props 값 지정하기
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent name="React" />;
+// };
+
+// export default App;
+
+// defaultProps 설정
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent />;
+// };
+
+// export default App;
+
+// export default App;
+
+// children 보여주기
 import React from 'react';
 import MyComponent from './MyComponent';
 
 const App = () => {
-  return <MyComponent name="React" />;
+  return <MyComponent>리액트</MyComponent>;
 };
 
 export default App;
