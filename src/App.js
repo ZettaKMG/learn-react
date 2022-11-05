@@ -1,3 +1,5 @@
+// ============================== chapter 2 시작 ==============================
+
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -241,19 +243,35 @@
 // export default App;
 
 // 들여쓰기가 이상한 코드 작성
+// import React from 'react';
+// import './App.css';
+
+// function App() {
+//   const name = 'react';
+//   return (
+//     <div>
+//       <div className="react">{name}</div>
+//       <h1>들여쓰기가 이상한</h1>
+//       <h2>코드</h2>
+//       <p>입니다.</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ============================== chapter 2 끝 ==============================
+
+// ============================== chapter 3 시작 ==============================
+
+// 컴포넌트 선언 방식은 함수형 컴포넌트, 클래스형 컴포넌트로 나뉨.
+// 함수형 컴포넌트의 예
 import React from 'react';
 import './App.css';
 
 function App() {
-  const name = 'react';
-  return (
-    <div>
-      <div className="react">{name}</div>
-      <h1>들여쓰기가 이상한</h1>
-      <h2>코드</h2>
-      <p>입니다.</p>
-    </div>
-  );
+  const name = '리액트';
+  return <div className="react">{name}</div>;
 }
 
 export default App;
