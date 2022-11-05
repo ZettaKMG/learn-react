@@ -341,11 +341,25 @@
 // export default App;
 
 // propTypes로 props 검증(에러 수정)
+// import React from 'react';
+// import MyComponent from './MyComponent';
+
+// const App = () => {
+//   return <MyComponent name="React">리액트</MyComponent>;
+// };
+
+// export default App;
+
+// 경고 메세지 사라지게 favoriteNumber 값 지정
 import React from 'react';
 import MyComponent from './MyComponent';
 
 const App = () => {
-  return <MyComponent name="React">리액트</MyComponent>;
+  return (
+    <MyComponent name="React" favoriteNumber={1}>
+      리액트
+    </MyComponent>
+  );
 };
 
 export default App;
