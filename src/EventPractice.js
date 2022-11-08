@@ -136,28 +136,113 @@
 // 임의 메서드 만들기
 // 앞서 onChange와 onClick에 전달한 함수를 따로 빼내서 컴포넌트 임의 메서드 만들기
 // 기본 방식
+// import React, { Component } from 'react';
+
+// class EventPractice extends Component {
+//   state = {
+//     message: ''
+//   }
+
+//   constructor(props) {
+//     super(props);
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleClick = this.handleClick.bind(this);
+//   }
+
+//   handleChange(e) {
+//     this.setState({
+//         message: e.target.value
+//     });
+//   }
+
+//   handleClick() {
+//     alert(this.state.message);
+//     this.setState({
+//         message: ''
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <>
+//         <h1>이벤트 연습</h1>
+//         <input
+//           type="text"
+//           name="message"
+//           placeholder="아무거나 입력해 보세요"
+//           value={this.state.message}
+//           onChange={this.handleChange}
+//         />
+//         <button onClick={this.handleClick}>확인</button>
+//       </>
+//     );
+//   }
+// }
+
+// export default EventPractice;
+
+// Property Initializer Syntax를 사용한 메서드 작성
+// 바벨의 transform-class-properties 문법 사용
+// import React, { Component } from 'react';
+
+// class EventPractice extends Component {
+//   state = {
+//     message: ''
+//   }
+
+//   handleChange = (e) => {
+//     this.setState({
+//         message: e.target.value
+//     });
+//   }
+
+//   handleClick = () => {
+//     alert(this.state.message);
+//     this.setState({
+//         message: ''
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <>
+//         <h1>이벤트 연습</h1>
+//         <input
+//           type="text"
+//           name="message"
+//           placeholder="아무거나 입력해 보세요"
+//           value={this.state.message}
+//           onChange={this.handleChange}
+//         />
+//         <button onClick={this.handleClick}>확인</button>
+//       </>
+//     );
+//   }
+// }
+
+// export default EventPractice;
+
+// input 여러 개 다루기
+// 메서드를 여러 개 만든다? > 가능은 하나 번거로움
+// event 객체를 활용하면 더 쉽게 처리가능(e.target.name 값 사용)
 import React, { Component } from 'react';
 
 class EventPractice extends Component {
   state = {
+    username: '',
     message: ''
   }
 
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
-        message: e.target.value
+        [e.target.name]: e.target.value // 핵심 코드
     });
   }
 
-  handleClick() {
-    alert(this.state.message);
+  handleClick = () => {
+    alert(this.state.username + ': ' + this.state.message);
     this.setState({
+        username: '',
         message: ''
     });
   }
@@ -166,6 +251,13 @@ class EventPractice extends Component {
     return (
       <>
         <h1>이벤트 연습</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="사용자명"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
         <input
           type="text"
           name="message"
