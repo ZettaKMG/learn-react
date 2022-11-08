@@ -66,12 +66,42 @@
 // export default EventPractice;
 
 // state에 input 값 담기
+// import React, { Component } from 'react';
+
+// class EventPractice extends Component {
+//   state = {
+//     message: ''
+//   }
+
+//   render() {
+//     return (
+//       <>
+//         <h1>이벤트 연습</h1>
+//         <input
+//           type="text"
+//           name="message"
+//           placeholder="아무거나 입력해 보세요"
+//           value={this.state.message}
+//           onChange={(e) => {
+//             this.setState({
+//               message: e.target.value
+//             })
+//           }}
+//         />
+//       </>
+//     );
+//   }
+// }
+
+// export default EventPractice;
+
+// 버튼을 누를 때 comment 값을 공백으로 설정
 import React, { Component } from 'react';
 
 class EventPractice extends Component {
   state = {
-    message: '',
-  };
+    message: ''
+  }
 
   render() {
     return (
@@ -84,10 +114,18 @@ class EventPractice extends Component {
           value={this.state.message}
           onChange={(e) => {
             this.setState({
-              message: e.target.value,
-            });
+              message: e.target.value
+            })
           }}
         />
+        <button onClick={
+            () => {
+                alert(this.state.message);
+                this.setState({
+                    message: ''
+                });
+            }
+        }>확인</button>
       </>
     );
   }
