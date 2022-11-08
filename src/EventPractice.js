@@ -225,6 +225,56 @@
 // input 여러 개 다루기
 // 메서드를 여러 개 만든다? > 가능은 하나 번거로움
 // event 객체를 활용하면 더 쉽게 처리가능(e.target.name 값 사용)
+// import React, { Component } from 'react';
+
+// class EventPractice extends Component {
+//   state = {
+//     username: '',
+//     message: ''
+//   }
+
+//   handleChange = (e) => {
+//     this.setState({
+//         [e.target.name]: e.target.value // 핵심 코드
+//     });
+//   }
+
+//   handleClick = () => {
+//     alert(this.state.username + ': ' + this.state.message);
+//     this.setState({
+//         username: '',
+//         message: ''
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <>
+//         <h1>이벤트 연습</h1>
+//         <input
+//           type="text"
+//           name="username"
+//           placeholder="사용자명"
+//           value={this.state.username}
+//           onChange={this.handleChange}
+//         />
+//         <input
+//           type="text"
+//           name="message"
+//           placeholder="아무거나 입력해 보세요"
+//           value={this.state.message}
+//           onChange={this.handleChange}
+//         />
+//         <button onClick={this.handleClick}>확인</button>
+//       </>
+//     );
+//   }
+// }
+
+// export default EventPractice;
+
+// onKeyPress 이벤트 핸들링
+// 두 번째 텍스트 인풋에 텍스트 입력 후 enter키 누르면 handleClick 메서드 실행되게끔 하기
 import React, { Component } from 'react';
 
 class EventPractice extends Component {
@@ -247,6 +297,12 @@ class EventPractice extends Component {
     });
   }
 
+  handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+        this.handleClick();
+    }
+  }
+
   render() {
     return (
       <>
@@ -264,6 +320,7 @@ class EventPractice extends Component {
           placeholder="아무거나 입력해 보세요"
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
         />
         <button onClick={this.handleClick}>확인</button>
       </>
