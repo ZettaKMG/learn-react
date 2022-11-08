@@ -375,11 +375,21 @@
 // export default App;
 
 // Say 컴포넌트를 App에서 렌더링
+// import React from 'react';
+// import Say from './Say';
+
+// const App = () => {
+//   return <Say />;
+// };
+
+// export default App;
+
+// EventPractice 렌더링(4.2.1.2)
 import React from 'react';
-import Say from './Say';
+import EventPractice from './EventPractice';
 
 const App = () => {
-  return <Say />;
+  return <EventPractice />;
 };
 
 export default App;
