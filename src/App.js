@@ -395,13 +395,29 @@
 // export default App;
 
 // App 컴포넌트에서 예제 컴포넌트 렌더링(함수형 컴포넌트 > 클래스형 컴포넌트로 전환)
+// import React, {Component} from 'react';
+// import ValidationSample from './ValidationSample';
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <ValidationSample/>
+//     );
+//   }
+// }
+
+// export default App;
+
+// App 컴포넌트에서 스크롤 박스 컴포넌트 렌더링
 import React, {Component} from 'react';
-import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
     return (
-      <ValidationSample/>
+      <>
+        <ScrollBox/>
+      </>
     );
   }
 }
