@@ -1,3 +1,5 @@
+// 리액트 컴포넌트에서 state 사용 순서
+// ValidationSample 컴포넌트 만들기 > input에 ref 달기 > 버튼을 누를 때마다 input에 포커스 주기
 import React, {Component} from 'react';
 import './ValidationSample.css';
 
