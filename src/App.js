@@ -409,6 +409,22 @@
 // export default App;
 
 // App 컴포넌트에서 스크롤 박스 컴포넌트 렌더링
+// import React, {Component} from 'react';
+// import ScrollBox from './ScrollBox';
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <>
+//         <ScrollBox/>
+//       </>
+//     );
+//   }
+// }
+
+// export default App;
+
+// 컴포넌트에 ref 달고 내부 메서드 사용
 import React, {Component} from 'react';
 import ScrollBox from './ScrollBox';
 
@@ -416,7 +432,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <ScrollBox/>
+        <ScrollBox ref={(ref) => this.scrollBox=ref}/>
+        <button onClick={() => this.scrollBox.scrollToBottom()}>
+          맨 밑으로          
+        </button>
       </>
     );
   }
