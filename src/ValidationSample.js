@@ -18,13 +18,15 @@ class ValidationSample extends Component {
         this.setState({
             clicked: true,
             validated: this.state.password === '0000'
-        })
+        });
+        this.input.focus(); // 버튼에서 onClick 이벤트 발생시 input에 포커스를 주도록 함
     }
 
     render() {
         return (
             <>
                 <input
+                    ref={(ref) => this.input=ref} // 콜백 함수를 사용하여 ref 달아주기
                     type="password"
                     value={this.state.password}
                     onChange={this.handleChange}
