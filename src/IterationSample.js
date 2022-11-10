@@ -45,6 +45,25 @@
 // 유동적 데이터 렌더링을 위한 순서
 // 초기 상태 설정하기 > 데이터 추가 기능 구현하기 > 데이터 제거 기능 구현하기
 // 초기 상태 설정하기
+// import React, {useState} from 'react';
+
+// const IterationSample = () => {
+//     const [names, setNames] = useState([
+//         {id: 1, text: '눈사람'},
+//         {id: 2, text: '얼음'},
+//         {id: 3, text: '눈'},
+//         {id: 4, text: '바람'}
+//     ]);
+//     const [inputText, setInputText] = useState('');
+//     const [nextId, setNextId] = useState(5); // 새로운 항목을 추가할 때 사용할 id
+
+//     const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
+//     return <ul>{namesList}</ul>;
+// };
+
+// export default IterationSample;
+
+// 데이터 추가기능 구현하기
 import React, {useState} from 'react';
 
 const IterationSample = () => {
@@ -57,8 +76,16 @@ const IterationSample = () => {
     const [inputText, setInputText] = useState('');
     const [nextId, setNextId] = useState(5); // 새로운 항목을 추가할 때 사용할 id
 
+    const onChange = e => setInputText(e.target.value);
+
     const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
-    return <ul>{namesList}</ul>;
+    return (
+        <>
+            <input value={inputText} onChange={onChange} />
+            <button>추가</button>
+            <ul>{namesList}</ul>
+        </>
+    );    
 };
 
 export default IterationSample;
