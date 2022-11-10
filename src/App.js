@@ -425,18 +425,34 @@
 // export default App;
 
 // 컴포넌트에 ref 달고 내부 메서드 사용
+// import React, {Component} from 'react';
+// import ScrollBox from './ScrollBox';
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <>
+//         <ScrollBox ref={(ref) => this.scrollBox=ref}/>
+//         <button onClick={() => this.scrollBox.scrollToBottom()}>
+//           맨 밑으로          
+//         </button>
+//       </>
+//     );
+//   }
+// }
+
+// export default App;
+
+// ====================== 5장 끝 ======================
+// ====================== 6장 시작 ======================
+// App 컴포넌트에서 예제 컴포넌트 렌더링
 import React, {Component} from 'react';
-import ScrollBox from './ScrollBox';
+import IterationSample from './IterationSample';
 
 class App extends Component {
   render() {
     return (
-      <>
-        <ScrollBox ref={(ref) => this.scrollBox=ref}/>
-        <button onClick={() => this.scrollBox.scrollToBottom()}>
-          맨 밑으로          
-        </button>
-      </>
+      <IterationSample />
     );
   }
 }
