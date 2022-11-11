@@ -27,3 +27,12 @@
 // 언마운트: 컴포넌트를 DOM에서 제거하는 것(마운트의 반대과정)
 // 언마운트하기 > componentWillUnmount
 // componentWillUnmount: 컴포넌트가 웹 브라우저 상에서 사라지기 전에 호출하는 메서드
+
+// 라이프사이클 메서드 살펴보기
+// render() 함수: 컴포넌트 모양새를 정의
+// 라이프사이클 메서드 중 유일한 필수 메서드
+// 이 메서드 안에서 this.props와 this.state에 접근
+// div 같은 태그 혹은 따로 선언한 컴포넌트 등의 요소 반환
+// 아무것도 보여주고 싶지 않으면 null값이나 false값을 반환하도록 함
+// *주의사항: 이 메서드 내에서는 이벤트 설정 아닌 곳에서 setState 사용X, 브라우저 DOM 접근X
+//           ㄴ DOM 정보 가져오거나 state에 변화를 주려면 componentDidMount에서 처리할 것!
