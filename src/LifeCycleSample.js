@@ -77,4 +77,6 @@
 // prevProps or prevState를 사용하여 컴포넌트가 이전에 가졌던 데이터에 접근.
 // getSnapshotBeforeUpdate에서 반환한 값이 있는 경우 여기서 snapshot 값을 전달받을 수 있음.
 
-// 
+// componentWillUnmount 메서드
+// 컴포넌트를 DOM에서 제거할 때 실행.
+// componentDidMount 메서드에서 등록한 이벤트, 타이머, 직접 생성한 DOM 등을 여기서 제거.
