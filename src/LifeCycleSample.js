@@ -52,4 +52,11 @@
 // 컴포넌트를 만들고, 첫 렌더링을 다 마친 후 실행.
 // 이 안에서 다른 js 라이브러리 또는 프레임워크 함수 호출 or 이벤트 등록, setTimeout, setInterval, 네트워크 요청 같은 비동기 작업 처리 가능
 
+// shouldComponentUpdate 메서드
+// props or state를 변경했을 때, 리렌더링을 시작할지 말지 여부를 지정하는 메서드.
+// 반드시 true or false 값 반환.
+// 이 메서드를 따로 생성하지 않으면 기본 true값 반환. false값 반환할 경우 업데이트 과정은 여기서 중지됨.
+// props -> this.props, state -> this.state로 접근.
+// 새로 설정된 props or state -> nextProps or nextState로 접근.
+
 // 
