@@ -71,3 +71,10 @@
 //     }
 // }
 
+// componentDidUpdate 메서드
+// 리렌더링 완료 후에 실행.
+// 업데이트 끝난 직후이므로 DOM 관련 처리해도 문제없음.
+// prevProps or prevState를 사용하여 컴포넌트가 이전에 가졌던 데이터에 접근.
+// getSnapshotBeforeUpdate에서 반환한 값이 있는 경우 여기서 snapshot 값을 전달받을 수 있음.
+
+// 
