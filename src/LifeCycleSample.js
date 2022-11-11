@@ -80,3 +80,14 @@
 // componentWillUnmount 메서드
 // 컴포넌트를 DOM에서 제거할 때 실행.
 // componentDidMount 메서드에서 등록한 이벤트, 타이머, 직접 생성한 DOM 등을 여기서 제거.
+
+// componentDidCatch 메서드
+// 컴포넌트 렌더링 도중 에러 발생시, 애플리케이션 먹통을 방지하고 오류 UI를 보여줌.
+// 예시
+// componentDidCatch(error, info) {
+//     this.setState({
+//         error: true
+//     });
+//     console.log({error, info});
+// }
+
