@@ -36,3 +36,14 @@
 // 아무것도 보여주고 싶지 않으면 null값이나 false값을 반환하도록 함
 // *주의사항: 이 메서드 내에서는 이벤트 설정 아닌 곳에서 setState 사용X, 브라우저 DOM 접근X
 //           ㄴ DOM 정보 가져오거나 state에 변화를 주려면 componentDidMount에서 처리할 것!
+
+// constructor 메서드: 컴포넌트의 생성자 메서드로 컴포넌트 만들 때 처음으로 실행됨. 초기 state를 정할 수 있음
+// getDerivedStateFromProps 메서드: props로 받아 온 값을 state에 동기화시키는 용도로 사용
+// ㄴ 컴포넌트가 마운트될 때, 업데이트 시 호출됨
+// 예시
+// static getDerivedStateFromProps(nextProps, prevState) {
+//     if (nextProps.value !== prevState.value) { // 조건에 따라 특정 값 동기화
+//         return {value: nextProps.value};
+//     }
+//     return null; // state를 변경할 필요가 없으면 null 반환
+// }
