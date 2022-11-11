@@ -59,4 +59,15 @@
 // props -> this.props, state -> this.state로 접근.
 // 새로 설정된 props or state -> nextProps or nextState로 접근.
 
-// 
+// getSnapshotBeforeUpdate 메서드
+// render에서 만들어진 결과물이 브라우저에 실제 반영되기 직전에 호출.
+// 이 메서드에서 반환하는 값은 componentDidUpdate에서 3번째 파라미터(snapshot) 값으로 전달받음.
+// ㄴ 주로 업데이트 직전 값을 참고할 때 활용.
+// 예시
+// getSnapshotBeforeUpdate(prevProps, prevState) {
+//     if (prevState.array !== this.state.array) {
+//         const{scrollTop, scrollHeight} = this.list
+//         return {scrollTop, scrollHeight};
+//     }
+// }
+
